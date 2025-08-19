@@ -1,0 +1,19 @@
+{
+  "name": "ziphub",
+  "version": "1.0.0",
+  "description": "ZIPs store - ZIPHUB by james. JSON DB, blue animated UI, admin approvals, likes/follows/comments.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "james",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "express": "4.19.2",
+    "uuid": "9.0.1",
+    "node-fetch": "3.3.2"
+  }
+}
