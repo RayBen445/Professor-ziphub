@@ -459,7 +459,16 @@ app.post('/api/admin/create-verified', authMiddleware, adminOnly, (req, res) => 
 
 // Root routes
 app.get('/', (req, res) => res.redirect('/html/index.html'));
+// -------------------- PINGBOT (Keep Alive) --------------------
+import fetch from "node-fetch";
 
+const SELF_URL = "https://ziphub-q8er.onrender.com"; // <-- replace with your Render app URL
+
+setInterval(() => {
+  fetch(SELF_URL)
+    .then(res => console.log(`[PINGBOT] Ping success: ${res.status}`))
+    .catch(err => console.error("[PINGBOT] Error pinging site:", err.message));
+}, 5000); // every 5 seconds
 app.listen(PORT, () => {
   console.log(`ZIPHUB running on http://localhost:${PORT}`);
 });
