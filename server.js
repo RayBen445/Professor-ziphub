@@ -458,20 +458,25 @@ app.post('/api/admin/create-verified', authMiddleware, adminOnly, (req, res) => 
 });
 
 // Root routes
-app.get('/', (req, res) => res.redirect('/html/index.html'));
-// -------------------- PINGBOT (Keep Alive) --------------------
-import fetch from "node-fetch";   // make sure node-fetch is installed
 
-const SELF_URL = "https://ziphub-q8er.onrender.com"; // your Render URL
+app.get('/', (req, res) => res.redirect('/html/index.html'));
+// 🔁 Self-ping every 5 seconds (to keep Render awake)
+const SELF_URL = (process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`).replace(/\/$/, "");
 
 setInterval(async () => {
   try {
-    const res = await fetch(SELF_URL);
-    console.log(`[PINGBOT] Ping success: ${res.status}`);
+    const r = await fetch(`${SELF_URL}/ping`);
+    await r.text(); // or .json() if you return JSON
+    console.log("🔁 Self-pinged", new Date().toISOString());
   } catch (err) {
-    console.error("[PINGBOT] Error pinging site:", err.message);
+    console.log("⚠️ Ping failed:", err.message);
   }
-}, 5000); // every 5 seconds
+}, 5000);
+
+// Optional: add a /ping route if not already there
+app.get("/ping", (req, res) => {
+  res.json({ pong: true, time: new Date().toISOString() });
+});
 app.listen(PORT, () => {
   console.log(`ZIPHUB running on http://localhost:${PORT}`);
 });
