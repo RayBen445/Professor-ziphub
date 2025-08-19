@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin — ZIPHUB</title>
+  <link rel="stylesheet" href="/public/css/styles.css"/>
+  <script defer src="/public/js/pingbot.js"></script>
+  <script defer src="/public/js/app.js"></script>
+</head>
+<body class="particles">
+  <div class="nav">
+    <div class="nav-inner container">
+      <a class="logo" href="/html/index.html">
+        <img src="/public/img/logo.svg"/><span>ZIPHUB</span>
+      </a>
+      <div style="margin-left:auto">
+        <a class="btn secondary" href="/html/dashboard.html">Dashboard</a>
+        <button class="btn danger" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Stats</h3>
+        <pre id="stats">{}</pre>
+      </div>
+      <div class="card">
+        <h3>Reports</h3>
+        <div id="reports" class="grid"></div>
+      </div>
+      <div class="card">
+        <h3>Approve Developer</h3>
+        <form id="approveForm">
+          <label>Developer ID</label>
+          <input class="input" id="approveId" placeholder="dev user id"/>
+          <button class="btn" type="submit">Approve</button>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Verify Developer</h3>
+        <form id="verifyForm">
+          <label>Developer ID</label>
+          <input class="input" id="verifyId" placeholder="dev user id"/>
+          <button class="btn" type="submit">Verify</button>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Create Verified Account</h3>
+        <form id="createVForm">
+          <label>Username</label>
+          <input class="input" id="v-username" placeholder="newdev"/>
+          <label>Password</label>
+          <input class="input" id="v-password" type="password" placeholder="••••••••"/>
+          <label>Followers Boost</label>
+          <input class="input" id="v-boost" type="number" value="50" min="0"/>
+          <button class="btn" type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

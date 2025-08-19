@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ZIPHUB — ZIPs Store</title>
+  <link rel="stylesheet" href="/public/css/styles.css"/>
+  <script defer src="/public/js/pingbot.js"></script>
+  <script defer src="/public/js/app.js"></script>
+</head>
+<body class="particles">
+  <div class="nav">
+    <div class="nav-inner container">
+      <a class="logo" href="/html/index.html">
+        <img src="/public/img/logo.svg" alt="logo"/><span>ZIPHUB</span>
+      </a>
+      <div style="margin-left:auto; display:flex; gap:8px">
+        <a data-guest class="btn secondary" href="/html/login.html">Login</a>
+        <a data-guest class="btn" href="/html/register.html">Create account</a>
+        <a data-user class="btn secondary" href="/html/dashboard.html" style="display:none">Dashboard</a>
+        <button data-user class="btn danger" onclick="logout()" style="display:none">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid cols-3">
+      <div class="card" style="grid-column: span 2;">
+        <h2 style="margin:8px 0">Explore ZIPs</h2>
+        <div id="files" class="grid cols-2"></div>
+      </div>
+      <div class="card">
+        <h3 style="margin:8px 0">Top Developers</h3>
+        <div id="devs" class="grid"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Profile — ZIPHUB</title>
+  <link rel="stylesheet" href="/public/css/styles.css"/>
+  <script defer src="/public/js/pingbot.js"></script>
+  <script defer src="/public/js/app.js"></script>
+</head>
+<body class="particles">
+  <div class="nav">
+    <div class="nav-inner container">
+      <a class="logo" href="/html/index.html">
+        <img src="/public/img/logo.svg"/><span>ZIPHUB</span>
+      </a>
+      <div style="margin-left:auto">
+        <button class="btn danger" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="max-width:720px">
+    <div class="card">
+      <h2>Your Developer Profile</h2>
+      <form id="profileForm">
+        <label>Display Name</label>
+        <input class="input" id="displayName" placeholder="Your display name"/>
+        <label>Bio</label>
+        <textarea class="input" id="bio" rows="4" placeholder="Short bio"></textarea>
+        <label>Avatar (image URL)</label>
+        <input class="input" id="avatar" placeholder="https://.../avatar.jpg"/>
+        <button class="btn" type="submit">Save Profile</button>
+        <a class="btn secondary" href="/html/dashboard.html">Back</a>
+      </form>
+      <div style="margin-top:12px; color:#9ec6dd; font-size:12px">
+        Circle avatar is applied automatically. Use square images (min 256x256) for best results.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

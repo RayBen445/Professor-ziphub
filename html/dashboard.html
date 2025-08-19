@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dashboard — ZIPHUB</title>
+  <link rel="stylesheet" href="/public/css/styles.css"/>
+  <script defer src="/public/js/pingbot.js"></script>
+  <script defer src="/public/js/app.js"></script>
+</head>
+<body class="particles">
+  <div class="nav">
+    <div class="nav-inner container">
+      <a class="logo" href="/html/index.html">
+        <img src="/public/img/logo.svg"/><span>ZIPHUB</span>
+      </a>
+      <div style="margin-left:auto; display:flex; gap:8px; align-items:center">
+        <span id="nav-username" class="badge">User</span>
+        <span id="nav-badge" class="badge" style="display:none">Creator</span>
+        <a class="btn secondary" href="/html/profile.html">Profile</a>
+        <a class="btn secondary" href="/html/admin.html">Admin</a>
+        <button class="btn danger" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Your uploads</h3>
+        <form id="uploadForm">
+          <label>Title</label>
+          <input class="input" id="up-title" placeholder="Bot ZIP title"/>
+          <label>Description (required)</label>
+          <textarea class="input" id="up-desc" rows="4" placeholder="Describe your bot..."></textarea>
+          <label>ZIP URL (optional)</label>
+          <input class="input" id="up-url" placeholder="https://.../file.zip"/>
+          <div style="display:flex; gap:10px; margin-top:8px">
+            <button class="btn" type="submit">Upload</button>
+            <a class="btn secondary" href="/html/index.html">Back to Home</a>
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Latest files</h3>
+        <div id="files" class="grid"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
