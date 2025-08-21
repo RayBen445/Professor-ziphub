@@ -37,7 +37,7 @@
  
 
 
-  <a href="https://jamesmd1.onrender.com"><img title="𝐑𝐄𝐍𝐃𝐄𝐑" src="https://img.shields.io/badge/𝐫𝐞𝐧𝐝𝐞𝐫 𝐟𝐫𝐞𝐞 𝐩𝐥𝐚𝐧-h?color=green&style=for-the-badge&logo=Render" width="230" height="38.45"/></a></p>
+  <a href="https://render.com"><img title="𝐑𝐄𝐍𝐃𝐄𝐑" src="https://img.shields.io/badge/𝐫𝐞𝐧𝐝𝐞𝐫 𝐟𝐫𝐞𝐞 𝐩𝐥𝐚𝐧-h?color=green&style=for-the-badge&logo=Render" width="230" height="38.45"/></a></p>
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
