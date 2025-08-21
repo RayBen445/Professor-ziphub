@@ -1,7 +1,7 @@
 {
   "name": "ziphub",
   "version": "1.0.0",
-  "description": "ZIPs store - ZIPHUB by james. JSON DB, blue animated UI, admin approvals, likes/follows/comments.",
+  "description": "ZIPs store - ZIPHUB by professor. JSON DB, blue animated UI, admin approvals, likes/follows/comments.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
